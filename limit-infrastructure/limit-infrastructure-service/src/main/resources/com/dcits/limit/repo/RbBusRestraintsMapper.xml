@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dcits.limit.repo.RbBusRestraintsMapper">
+    <resultMap id="BaseResultMap" type="com.dcits.limit.entity.RbBusRestraints">
+        <id column="RES_SEQ_NO" property="resSeqNo" jdbcType="VARCHAR" />
+        <result column="THAW_OTH_DOCUMENT_ID2" property="thawOthDocumentId2" jdbcType="VARCHAR" />
+        <result column="THAW_DOCUMENT_TYPE2" property="thawDocumentType2" jdbcType="VARCHAR" />
+        <result column="DEDUCTION_JUDICIARY_NAME" property="deductionJudiciaryName" jdbcType="VARCHAR" />
+        <result column="LAST_UPD_TIMESTAMP" property="lastUpdTimestamp" jdbcType="VARCHAR" />
+        <result column="TRAN_BRANCH" property="tranBranch" jdbcType="VARCHAR" />
+        <result column="TERM" property="term" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_DOCUMENT_TYPE2" property="judiciaryDocumentType2" jdbcType="VARCHAR" />
+        <result column="RES_LAW_NO" property="resLawNo" jdbcType="VARCHAR" />
+        <result column="START_DATE" property="startDate" jdbcType="TIMESTAMP" />
+        <result column="TRAN_AMT" property="tranAmt" jdbcType="DECIMAL" />
+        <result column="JUDICIARY_OTH_DOCUMENT_ID2" property="judiciaryOthDocumentId2" jdbcType="VARCHAR" />
+        <result column="COLLAT_IND" property="collatInd" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_DOCUMENT_TYPE" property="judiciaryDocumentType" jdbcType="VARCHAR" />
+        <result column="INTERNAL_KEY" property="internalKey" jdbcType="INTEGER" />
+        <result column="AUTH_USER_ID" property="authUserId" jdbcType="VARCHAR" />
+        <result column="USER_ID" property="userId" jdbcType="VARCHAR" />
+        <result column="SOURCE_MODULE" property="sourceModule" jdbcType="VARCHAR" />
+        <result column="RESTRAINT_JUDICIARY_NAME" property="restraintJudiciaryName" jdbcType="VARCHAR" />
+        <result column="THAW_OTH_DOCUMENT_TYPE" property="thawOthDocumentType" jdbcType="VARCHAR" />
+        <result column="SETTLEMENT_DATE" property="settlementDate" jdbcType="TIMESTAMP" />
+        <result column="THAW_OTH_OFFICER_NAME" property="thawOthOfficerName" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_OTH_DOCUMENT_TYPE2" property="judiciaryOthDocumentType2" jdbcType="VARCHAR" />
+        <result column="RELEASE_LAW_NO" property="releaseLawNo" jdbcType="VARCHAR" />
+        <result column="RESTRAINT_LEVEL" property="restraintLevel" jdbcType="VARCHAR" />
+        <result column="RESTRAINT_END_TIME" property="restraintEndTime" jdbcType="VARCHAR" />
+        <result column="DEDUCTION_LAW_TYPE" property="deductionLawType" jdbcType="VARCHAR" />
+        <result column="TERM_TYPE" property="termType" jdbcType="VARCHAR" />
+        <result column="PRE_FROZEN_FLAG" property="preFrozenFlag" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_OTH_DOCUMENT_ID" property="judiciaryOthDocumentId" jdbcType="VARCHAR" />
+        <result column="THAW_DOCUMENT_TYPE" property="thawDocumentType" jdbcType="VARCHAR" />
+        <result column="CHANNEL_SEQ_NO" property="channelSeqNo" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_DOCUMENT_ID2" property="judiciaryDocumentId2" jdbcType="VARCHAR" />
+        <result column="RESTRAINT_TYPE" property="restraintType" jdbcType="VARCHAR" />
+        <result column="PROGRAM_ID" property="programId" jdbcType="VARCHAR" />
+        <result column="PLEDGED_AMT" property="pledgedAmt" jdbcType="DECIMAL" />
+        <result column="THAW_OTH_DOCUMENT_TYPE2" property="thawOthDocumentType2" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_DOCUMENT_ID" property="judiciaryDocumentId" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_OFFICER_NAME" property="judiciaryOfficerName" jdbcType="VARCHAR" />
+        <result column="ORIGINAL_APPLICATION_ID" property="originalApplicationId" jdbcType="VARCHAR" />
+        <result column="ACCT_INTERNAL_KEY_TYPE" property="acctInternalKeyType" jdbcType="VARCHAR" />
+        <result column="BUSINESS_APPLICATION_ID" property="businessApplicationId" jdbcType="VARCHAR" />
+        <result column="RES_ACCT_RANGE" property="resAcctRange" jdbcType="VARCHAR" />
+        <result column="THAW_OTH_DOCUMENT_ID" property="thawOthDocumentId" jdbcType="VARCHAR" />
+        <result column="THAW_DOCUMENT_ID2" property="thawDocumentId2" jdbcType="VARCHAR" />
+        <result column="BASE_ACCT_NO" property="baseAcctNo" jdbcType="VARCHAR" />
+        <result column="REVERSAL_FLAG" property="reversalFlag" jdbcType="VARCHAR" />
+        <result column="THAW_OFFICER_NAME" property="thawOfficerName" jdbcType="VARCHAR" />
+        <result column="RELEASE_JUDICIARY_NAME" property="releaseJudiciaryName" jdbcType="VARCHAR" />
+        <result column="CREATE_TIMESTAMP" property="createTimestamp" jdbcType="VARCHAR" />
+        <result column="RESTRAINT_SOURCE" property="restraintSource" jdbcType="VARCHAR" />
+        <result column="RES_PRIORITY" property="resPriority" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_OTH_OFFICER_NAME" property="judiciaryOthOfficerName" jdbcType="VARCHAR" />
+        <result column="CHANNEL_DATE" property="channelDate" jdbcType="TIMESTAMP" />
+        <result column="CONTINUE_FREEZE_FLAG" property="continueFreezeFlag" jdbcType="VARCHAR" />
+        <result column="THAW_DOCUMENT_ID" property="thawDocumentId" jdbcType="VARCHAR" />
+        <result column="JUDICIARY_OTH_DOCUMENT_TYPE" property="judiciaryOthDocumentType" jdbcType="VARCHAR" />
+        <result column="DEDUCTION_LAW_NO" property="deductionLawNo" jdbcType="VARCHAR" />
+        <result column="AH_BU_FLAG" property="ahBuFlag" jdbcType="VARCHAR" />
+        <result column="WAIT_SEQ" property="waitSeq" jdbcType="VARCHAR" />
+        <result column="REFERENCE" property="reference" jdbcType="VARCHAR" />
+        <result column="RESTRAINTS_STATUS" property="restraintsStatus" jdbcType="VARCHAR" />
+        <result column="COMPANY" property="company" jdbcType="VARCHAR" />
+        <result column="TRAN_DATE" property="tranDate" jdbcType="TIMESTAMP" />
+        <result column="END_DATE" property="endDate" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+    <sql id="Base_Column_List">
+        THAW_OTH_DOCUMENT_ID2,        THAW_DOCUMENT_TYPE2,        DEDUCTION_JUDICIARY_NAME,        LAST_UPD_TIMESTAMP,        TRAN_BRANCH,        TERM,        JUDICIARY_DOCUMENT_TYPE2,        RES_LAW_NO,        START_DATE,        TRAN_AMT,        JUDICIARY_OTH_DOCUMENT_ID2,        COLLAT_IND,        JUDICIARY_DOCUMENT_TYPE,        INTERNAL_KEY,        AUTH_USER_ID,        USER_ID,        SOURCE_MODULE,        RESTRAINT_JUDICIARY_NAME,        THAW_OTH_DOCUMENT_TYPE,        SETTLEMENT_DATE,        THAW_OTH_OFFICER_NAME,        JUDICIARY_OTH_DOCUMENT_TYPE2,        RELEASE_LAW_NO,        RESTRAINT_LEVEL,        RESTRAINT_END_TIME,        DEDUCTION_LAW_TYPE,        TERM_TYPE,        RES_SEQ_NO,        PRE_FROZEN_FLAG,        JUDICIARY_OTH_DOCUMENT_ID,        THAW_DOCUMENT_TYPE,        CHANNEL_SEQ_NO,        JUDICIARY_DOCUMENT_ID2,        RESTRAINT_TYPE,        PROGRAM_ID,        PLEDGED_AMT,        THAW_OTH_DOCUMENT_TYPE2,        JUDICIARY_DOCUMENT_ID,        JUDICIARY_OFFICER_NAME,        ORIGINAL_APPLICATION_ID,        ACCT_INTERNAL_KEY_TYPE,        BUSINESS_APPLICATION_ID,        RES_ACCT_RANGE,        THAW_OTH_DOCUMENT_ID,        THAW_DOCUMENT_ID2,        BASE_ACCT_NO,        REVERSAL_FLAG,        THAW_OFFICER_NAME,        RELEASE_JUDICIARY_NAME,        CREATE_TIMESTAMP,        RESTRAINT_SOURCE,        RES_PRIORITY,        JUDICIARY_OTH_OFFICER_NAME,        CHANNEL_DATE,        CONTINUE_FREEZE_FLAG,        THAW_DOCUMENT_ID,        JUDICIARY_OTH_DOCUMENT_TYPE,        DEDUCTION_LAW_NO,        AH_BU_FLAG,        WAIT_SEQ,        REFERENCE,        RESTRAINTS_STATUS,        COMPANY,        TRAN_DATE,        END_DATE    </sql>
+
+    <select id="selectByExample" parameterType="com.dcits.limit.entity.RbBusRestraintsExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List" />
+        from RB_BUS_RESTRAINTS
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause" />
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from RB_BUS_RESTRAINTS
+        where RES_SEQ_NO = #{resSeqNo,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="map">
+        delete from RB_BUS_RESTRAINTS
+        where RES_SEQ_NO = #{resSeqNo,jdbcType=VARCHAR}
+    </delete>
+
+    <delete id="deleteByExample" parameterType="com.dcits.limit.entity.RbBusRestraintsExample">
+        delete from RB_BUS_RESTRAINTS
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause" />
+        </if>
+    </delete>
+
+    <insert id="insert" parameterType="com.dcits.limit.entity.RbBusRestraints">
+        insert into RB_BUS_RESTRAINTS
+        (
+            THAW_OTH_DOCUMENT_ID2,            THAW_DOCUMENT_TYPE2,            DEDUCTION_JUDICIARY_NAME,            LAST_UPD_TIMESTAMP,            TRAN_BRANCH,            TERM,            JUDICIARY_DOCUMENT_TYPE2,            RES_LAW_NO,            START_DATE,            TRAN_AMT,            JUDICIARY_OTH_DOCUMENT_ID2,            COLLAT_IND,            JUDICIARY_DOCUMENT_TYPE,            INTERNAL_KEY,            AUTH_USER_ID,            USER_ID,            SOURCE_MODULE,            RESTRAINT_JUDICIARY_NAME,            THAW_OTH_DOCUMENT_TYPE,            SETTLEMENT_DATE,            THAW_OTH_OFFICER_NAME,            JUDICIARY_OTH_DOCUMENT_TYPE2,            RELEASE_LAW_NO,            RESTRAINT_LEVEL,            RESTRAINT_END_TIME,            DEDUCTION_LAW_TYPE,            TERM_TYPE,            RES_SEQ_NO,            PRE_FROZEN_FLAG,            JUDICIARY_OTH_DOCUMENT_ID,            THAW_DOCUMENT_TYPE,            CHANNEL_SEQ_NO,            JUDICIARY_DOCUMENT_ID2,            RESTRAINT_TYPE,            PROGRAM_ID,            PLEDGED_AMT,            THAW_OTH_DOCUMENT_TYPE2,            JUDICIARY_DOCUMENT_ID,            JUDICIARY_OFFICER_NAME,            ORIGINAL_APPLICATION_ID,            ACCT_INTERNAL_KEY_TYPE,            BUSINESS_APPLICATION_ID,            RES_ACCT_RANGE,            THAW_OTH_DOCUMENT_ID,            THAW_DOCUMENT_ID2,            BASE_ACCT_NO,            REVERSAL_FLAG,            THAW_OFFICER_NAME,            RELEASE_JUDICIARY_NAME,            CREATE_TIMESTAMP,            RESTRAINT_SOURCE,            RES_PRIORITY,            JUDICIARY_OTH_OFFICER_NAME,            CHANNEL_DATE,            CONTINUE_FREEZE_FLAG,            THAW_DOCUMENT_ID,            JUDICIARY_OTH_DOCUMENT_TYPE,            DEDUCTION_LAW_NO,            AH_BU_FLAG,            WAIT_SEQ,            REFERENCE,            RESTRAINTS_STATUS,            COMPANY,            TRAN_DATE,            END_DATE        )
+        values
+        (
+            #{thawOthDocumentId2,jdbcType=VARCHAR},            #{thawDocumentType2,jdbcType=VARCHAR},            #{deductionJudiciaryName,jdbcType=VARCHAR},            #{lastUpdTimestamp,jdbcType=VARCHAR},            #{tranBranch,jdbcType=VARCHAR},            #{term,jdbcType=VARCHAR},            #{judiciaryDocumentType2,jdbcType=VARCHAR},            #{resLawNo,jdbcType=VARCHAR},            #{startDate,jdbcType=TIMESTAMP},            #{tranAmt,jdbcType=DECIMAL},            #{judiciaryOthDocumentId2,jdbcType=VARCHAR},            #{collatInd,jdbcType=VARCHAR},            #{judiciaryDocumentType,jdbcType=VARCHAR},            #{internalKey,jdbcType=INTEGER},            #{authUserId,jdbcType=VARCHAR},            #{userId,jdbcType=VARCHAR},            #{sourceModule,jdbcType=VARCHAR},            #{restraintJudiciaryName,jdbcType=VARCHAR},            #{thawOthDocumentType,jdbcType=VARCHAR},            #{settlementDate,jdbcType=TIMESTAMP},            #{thawOthOfficerName,jdbcType=VARCHAR},            #{judiciaryOthDocumentType2,jdbcType=VARCHAR},            #{releaseLawNo,jdbcType=VARCHAR},            #{restraintLevel,jdbcType=VARCHAR},            #{restraintEndTime,jdbcType=VARCHAR},            #{deductionLawType,jdbcType=VARCHAR},            #{termType,jdbcType=VARCHAR},            #{resSeqNo,jdbcType=VARCHAR},            #{preFrozenFlag,jdbcType=VARCHAR},            #{judiciaryOthDocumentId,jdbcType=VARCHAR},            #{thawDocumentType,jdbcType=VARCHAR},            #{channelSeqNo,jdbcType=VARCHAR},            #{judiciaryDocumentId2,jdbcType=VARCHAR},            #{restraintType,jdbcType=VARCHAR},            #{programId,jdbcType=VARCHAR},            #{pledgedAmt,jdbcType=DECIMAL},            #{thawOthDocumentType2,jdbcType=VARCHAR},            #{judiciaryDocumentId,jdbcType=VARCHAR},            #{judiciaryOfficerName,jdbcType=VARCHAR},            #{originalApplicationId,jdbcType=VARCHAR},            #{acctInternalKeyType,jdbcType=VARCHAR},            #{businessApplicationId,jdbcType=VARCHAR},            #{resAcctRange,jdbcType=VARCHAR},            #{thawOthDocumentId,jdbcType=VARCHAR},            #{thawDocumentId2,jdbcType=VARCHAR},            #{baseAcctNo,jdbcType=VARCHAR},            #{reversalFlag,jdbcType=VARCHAR},            #{thawOfficerName,jdbcType=VARCHAR},            #{releaseJudiciaryName,jdbcType=VARCHAR},            #{createTimestamp,jdbcType=VARCHAR},            #{restraintSource,jdbcType=VARCHAR},            #{resPriority,jdbcType=VARCHAR},            #{judiciaryOthOfficerName,jdbcType=VARCHAR},            #{channelDate,jdbcType=TIMESTAMP},            #{continueFreezeFlag,jdbcType=VARCHAR},            #{thawDocumentId,jdbcType=VARCHAR},            #{judiciaryOthDocumentType,jdbcType=VARCHAR},            #{deductionLawNo,jdbcType=VARCHAR},            #{ahBuFlag,jdbcType=VARCHAR},            #{waitSeq,jdbcType=VARCHAR},            #{reference,jdbcType=VARCHAR},            #{restraintsStatus,jdbcType=VARCHAR},            #{company,jdbcType=VARCHAR},            #{tranDate,jdbcType=TIMESTAMP},            #{endDate,jdbcType=TIMESTAMP}        )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.dcits.limit.entity.RbBusRestraints">
+        insert into RB_BUS_RESTRAINTS
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="thawOthDocumentId2 != null">
+                THAW_OTH_DOCUMENT_ID2,
+            </if>
+            <if test="thawDocumentType2 != null">
+                THAW_DOCUMENT_TYPE2,
+            </if>
+            <if test="deductionJudiciaryName != null">
+                DEDUCTION_JUDICIARY_NAME,
+            </if>
+            <if test="lastUpdTimestamp != null">
+                LAST_UPD_TIMESTAMP,
+            </if>
+            <if test="tranBranch != null">
+                TRAN_BRANCH,
+            </if>
+            <if test="term != null">
+                TERM,
+            </if>
+            <if test="judiciaryDocumentType2 != null">
+                JUDICIARY_DOCUMENT_TYPE2,
+            </if>
+            <if test="resLawNo != null">
+                RES_LAW_NO,
+            </if>
+            <if test="startDate != null">
+                START_DATE,
+            </if>
+            <if test="tranAmt != null">
+                TRAN_AMT,
+            </if>
+            <if test="judiciaryOthDocumentId2 != null">
+                JUDICIARY_OTH_DOCUMENT_ID2,
+            </if>
+            <if test="collatInd != null">
+                COLLAT_IND,
+            </if>
+            <if test="judiciaryDocumentType != null">
+                JUDICIARY_DOCUMENT_TYPE,
+            </if>
+            <if test="internalKey != null">
+                INTERNAL_KEY,
+            </if>
+            <if test="authUserId != null">
+                AUTH_USER_ID,
+            </if>
+            <if test="userId != null">
+                USER_ID,
+            </if>
+            <if test="sourceModule != null">
+                SOURCE_MODULE,
+            </if>
+            <if test="restraintJudiciaryName != null">
+                RESTRAINT_JUDICIARY_NAME,
+            </if>
+            <if test="thawOthDocumentType != null">
+                THAW_OTH_DOCUMENT_TYPE,
+            </if>
+            <if test="settlementDate != null">
+                SETTLEMENT_DATE,
+            </if>
+            <if test="thawOthOfficerName != null">
+                THAW_OTH_OFFICER_NAME,
+            </if>
+            <if test="judiciaryOthDocumentType2 != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE2,
+            </if>
+            <if test="releaseLawNo != null">
+                RELEASE_LAW_NO,
+            </if>
+            <if test="restraintLevel != null">
+                RESTRAINT_LEVEL,
+            </if>
+            <if test="restraintEndTime != null">
+                RESTRAINT_END_TIME,
+            </if>
+            <if test="deductionLawType != null">
+                DEDUCTION_LAW_TYPE,
+            </if>
+            <if test="termType != null">
+                TERM_TYPE,
+            </if>
+            <if test="resSeqNo != null">
+                RES_SEQ_NO,
+            </if>
+            <if test="preFrozenFlag != null">
+                PRE_FROZEN_FLAG,
+            </if>
+            <if test="judiciaryOthDocumentId != null">
+                JUDICIARY_OTH_DOCUMENT_ID,
+            </if>
+            <if test="thawDocumentType != null">
+                THAW_DOCUMENT_TYPE,
+            </if>
+            <if test="channelSeqNo != null">
+                CHANNEL_SEQ_NO,
+            </if>
+            <if test="judiciaryDocumentId2 != null">
+                JUDICIARY_DOCUMENT_ID2,
+            </if>
+            <if test="restraintType != null">
+                RESTRAINT_TYPE,
+            </if>
+            <if test="programId != null">
+                PROGRAM_ID,
+            </if>
+            <if test="pledgedAmt != null">
+                PLEDGED_AMT,
+            </if>
+            <if test="thawOthDocumentType2 != null">
+                THAW_OTH_DOCUMENT_TYPE2,
+            </if>
+            <if test="judiciaryDocumentId != null">
+                JUDICIARY_DOCUMENT_ID,
+            </if>
+            <if test="judiciaryOfficerName != null">
+                JUDICIARY_OFFICER_NAME,
+            </if>
+            <if test="originalApplicationId != null">
+                ORIGINAL_APPLICATION_ID,
+            </if>
+            <if test="acctInternalKeyType != null">
+                ACCT_INTERNAL_KEY_TYPE,
+            </if>
+            <if test="businessApplicationId != null">
+                BUSINESS_APPLICATION_ID,
+            </if>
+            <if test="resAcctRange != null">
+                RES_ACCT_RANGE,
+            </if>
+            <if test="thawOthDocumentId != null">
+                THAW_OTH_DOCUMENT_ID,
+            </if>
+            <if test="thawDocumentId2 != null">
+                THAW_DOCUMENT_ID2,
+            </if>
+            <if test="baseAcctNo != null">
+                BASE_ACCT_NO,
+            </if>
+            <if test="reversalFlag != null">
+                REVERSAL_FLAG,
+            </if>
+            <if test="thawOfficerName != null">
+                THAW_OFFICER_NAME,
+            </if>
+            <if test="releaseJudiciaryName != null">
+                RELEASE_JUDICIARY_NAME,
+            </if>
+            <if test="createTimestamp != null">
+                CREATE_TIMESTAMP,
+            </if>
+            <if test="restraintSource != null">
+                RESTRAINT_SOURCE,
+            </if>
+            <if test="resPriority != null">
+                RES_PRIORITY,
+            </if>
+            <if test="judiciaryOthOfficerName != null">
+                JUDICIARY_OTH_OFFICER_NAME,
+            </if>
+            <if test="channelDate != null">
+                CHANNEL_DATE,
+            </if>
+            <if test="continueFreezeFlag != null">
+                CONTINUE_FREEZE_FLAG,
+            </if>
+            <if test="thawDocumentId != null">
+                THAW_DOCUMENT_ID,
+            </if>
+            <if test="judiciaryOthDocumentType != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE,
+            </if>
+            <if test="deductionLawNo != null">
+                DEDUCTION_LAW_NO,
+            </if>
+            <if test="ahBuFlag != null">
+                AH_BU_FLAG,
+            </if>
+            <if test="waitSeq != null">
+                WAIT_SEQ,
+            </if>
+            <if test="reference != null">
+                REFERENCE,
+            </if>
+            <if test="restraintsStatus != null">
+                RESTRAINTS_STATUS,
+            </if>
+            <if test="company != null">
+                COMPANY,
+            </if>
+            <if test="tranDate != null">
+                TRAN_DATE,
+            </if>
+            <if test="endDate != null">
+                END_DATE,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="thawOthDocumentId2 != null">
+                #{thawOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentType2 != null">
+                #{thawDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionJudiciaryName != null">
+                #{deductionJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdTimestamp != null">
+                #{lastUpdTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="tranBranch != null">
+                #{tranBranch,jdbcType=VARCHAR},
+            </if>
+            <if test="term != null">
+                #{term,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentType2 != null">
+                #{judiciaryDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="resLawNo != null">
+                #{resLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="startDate != null">
+                #{startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="tranAmt != null">
+                #{tranAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="judiciaryOthDocumentId2 != null">
+                #{judiciaryOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="collatInd != null">
+                #{collatInd,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentType != null">
+                #{judiciaryDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="internalKey != null">
+                #{internalKey,jdbcType=INTEGER},
+            </if>
+            <if test="authUserId != null">
+                #{authUserId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="sourceModule != null">
+                #{sourceModule,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintJudiciaryName != null">
+                #{restraintJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOthDocumentType != null">
+                #{thawOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="settlementDate != null">
+                #{settlementDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="thawOthOfficerName != null">
+                #{thawOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentType2 != null">
+                #{judiciaryOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="releaseLawNo != null">
+                #{releaseLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintLevel != null">
+                #{restraintLevel,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintEndTime != null">
+                #{restraintEndTime,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionLawType != null">
+                #{deductionLawType,jdbcType=VARCHAR},
+            </if>
+            <if test="termType != null">
+                #{termType,jdbcType=VARCHAR},
+            </if>
+            <if test="resSeqNo != null">
+                #{resSeqNo,jdbcType=VARCHAR},
+            </if>
+            <if test="preFrozenFlag != null">
+                #{preFrozenFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentId != null">
+                #{judiciaryOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentType != null">
+                #{thawDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="channelSeqNo != null">
+                #{channelSeqNo,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentId2 != null">
+                #{judiciaryDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintType != null">
+                #{restraintType,jdbcType=VARCHAR},
+            </if>
+            <if test="programId != null">
+                #{programId,jdbcType=VARCHAR},
+            </if>
+            <if test="pledgedAmt != null">
+                #{pledgedAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="thawOthDocumentType2 != null">
+                #{thawOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentId != null">
+                #{judiciaryDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOfficerName != null">
+                #{judiciaryOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="originalApplicationId != null">
+                #{originalApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="acctInternalKeyType != null">
+                #{acctInternalKeyType,jdbcType=VARCHAR},
+            </if>
+            <if test="businessApplicationId != null">
+                #{businessApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="resAcctRange != null">
+                #{resAcctRange,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOthDocumentId != null">
+                #{thawOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentId2 != null">
+                #{thawDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="baseAcctNo != null">
+                #{baseAcctNo,jdbcType=VARCHAR},
+            </if>
+            <if test="reversalFlag != null">
+                #{reversalFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOfficerName != null">
+                #{thawOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="releaseJudiciaryName != null">
+                #{releaseJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTimestamp != null">
+                #{createTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintSource != null">
+                #{restraintSource,jdbcType=VARCHAR},
+            </if>
+            <if test="resPriority != null">
+                #{resPriority,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthOfficerName != null">
+                #{judiciaryOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="channelDate != null">
+                #{channelDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="continueFreezeFlag != null">
+                #{continueFreezeFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentId != null">
+                #{thawDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentType != null">
+                #{judiciaryOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionLawNo != null">
+                #{deductionLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="ahBuFlag != null">
+                #{ahBuFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="waitSeq != null">
+                #{waitSeq,jdbcType=VARCHAR},
+            </if>
+            <if test="reference != null">
+                #{reference,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintsStatus != null">
+                #{restraintsStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="company != null">
+                #{company,jdbcType=VARCHAR},
+            </if>
+            <if test="tranDate != null">
+                #{tranDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endDate != null">
+                #{endDate,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="countByExample" parameterType="com.dcits.limit.entity.RbBusRestraintsExample" resultType="java.lang.Long">
+        select count(*) from RB_BUS_RESTRAINTS
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause" />
+        </if>
+    </select>
+
+    <update id="updateByExampleSelective" parameterType="map">
+        update RB_BUS_RESTRAINTS
+        <set>
+            <if test="row.thawOthDocumentId2 != null">
+                THAW_OTH_DOCUMENT_ID2 = #{row.thawOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawDocumentType2 != null">
+                THAW_DOCUMENT_TYPE2 = #{row.thawDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.deductionJudiciaryName != null">
+                DEDUCTION_JUDICIARY_NAME = #{row.deductionJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.lastUpdTimestamp != null">
+                LAST_UPD_TIMESTAMP = #{row.lastUpdTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="row.tranBranch != null">
+                TRAN_BRANCH = #{row.tranBranch,jdbcType=VARCHAR},
+            </if>
+            <if test="row.term != null">
+                TERM = #{row.term,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryDocumentType2 != null">
+                JUDICIARY_DOCUMENT_TYPE2 = #{row.judiciaryDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.resLawNo != null">
+                RES_LAW_NO = #{row.resLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.startDate != null">
+                START_DATE = #{row.startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="row.tranAmt != null">
+                TRAN_AMT = #{row.tranAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="row.judiciaryOthDocumentId2 != null">
+                JUDICIARY_OTH_DOCUMENT_ID2 = #{row.judiciaryOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.collatInd != null">
+                COLLAT_IND = #{row.collatInd,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryDocumentType != null">
+                JUDICIARY_DOCUMENT_TYPE = #{row.judiciaryDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.internalKey != null">
+                INTERNAL_KEY = #{row.internalKey,jdbcType=INTEGER},
+            </if>
+            <if test="row.authUserId != null">
+                AUTH_USER_ID = #{row.authUserId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.userId != null">
+                USER_ID = #{row.userId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.sourceModule != null">
+                SOURCE_MODULE = #{row.sourceModule,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintJudiciaryName != null">
+                RESTRAINT_JUDICIARY_NAME = #{row.restraintJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawOthDocumentType != null">
+                THAW_OTH_DOCUMENT_TYPE = #{row.thawOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.settlementDate != null">
+                SETTLEMENT_DATE = #{row.settlementDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="row.thawOthOfficerName != null">
+                THAW_OTH_OFFICER_NAME = #{row.thawOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryOthDocumentType2 != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE2 = #{row.judiciaryOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.releaseLawNo != null">
+                RELEASE_LAW_NO = #{row.releaseLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintLevel != null">
+                RESTRAINT_LEVEL = #{row.restraintLevel,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintEndTime != null">
+                RESTRAINT_END_TIME = #{row.restraintEndTime,jdbcType=VARCHAR},
+            </if>
+            <if test="row.deductionLawType != null">
+                DEDUCTION_LAW_TYPE = #{row.deductionLawType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.termType != null">
+                TERM_TYPE = #{row.termType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.resSeqNo != null">
+                RES_SEQ_NO = #{row.resSeqNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.preFrozenFlag != null">
+                PRE_FROZEN_FLAG = #{row.preFrozenFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryOthDocumentId != null">
+                JUDICIARY_OTH_DOCUMENT_ID = #{row.judiciaryOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawDocumentType != null">
+                THAW_DOCUMENT_TYPE = #{row.thawDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.channelSeqNo != null">
+                CHANNEL_SEQ_NO = #{row.channelSeqNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryDocumentId2 != null">
+                JUDICIARY_DOCUMENT_ID2 = #{row.judiciaryDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintType != null">
+                RESTRAINT_TYPE = #{row.restraintType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.programId != null">
+                PROGRAM_ID = #{row.programId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.pledgedAmt != null">
+                PLEDGED_AMT = #{row.pledgedAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="row.thawOthDocumentType2 != null">
+                THAW_OTH_DOCUMENT_TYPE2 = #{row.thawOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryDocumentId != null">
+                JUDICIARY_DOCUMENT_ID = #{row.judiciaryDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryOfficerName != null">
+                JUDICIARY_OFFICER_NAME = #{row.judiciaryOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.originalApplicationId != null">
+                ORIGINAL_APPLICATION_ID = #{row.originalApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.acctInternalKeyType != null">
+                ACCT_INTERNAL_KEY_TYPE = #{row.acctInternalKeyType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.businessApplicationId != null">
+                BUSINESS_APPLICATION_ID = #{row.businessApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.resAcctRange != null">
+                RES_ACCT_RANGE = #{row.resAcctRange,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawOthDocumentId != null">
+                THAW_OTH_DOCUMENT_ID = #{row.thawOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawDocumentId2 != null">
+                THAW_DOCUMENT_ID2 = #{row.thawDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="row.baseAcctNo != null">
+                BASE_ACCT_NO = #{row.baseAcctNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.reversalFlag != null">
+                REVERSAL_FLAG = #{row.reversalFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawOfficerName != null">
+                THAW_OFFICER_NAME = #{row.thawOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.releaseJudiciaryName != null">
+                RELEASE_JUDICIARY_NAME = #{row.releaseJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.createTimestamp != null">
+                CREATE_TIMESTAMP = #{row.createTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintSource != null">
+                RESTRAINT_SOURCE = #{row.restraintSource,jdbcType=VARCHAR},
+            </if>
+            <if test="row.resPriority != null">
+                RES_PRIORITY = #{row.resPriority,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryOthOfficerName != null">
+                JUDICIARY_OTH_OFFICER_NAME = #{row.judiciaryOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="row.channelDate != null">
+                CHANNEL_DATE = #{row.channelDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="row.continueFreezeFlag != null">
+                CONTINUE_FREEZE_FLAG = #{row.continueFreezeFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="row.thawDocumentId != null">
+                THAW_DOCUMENT_ID = #{row.thawDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="row.judiciaryOthDocumentType != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE = #{row.judiciaryOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="row.deductionLawNo != null">
+                DEDUCTION_LAW_NO = #{row.deductionLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="row.ahBuFlag != null">
+                AH_BU_FLAG = #{row.ahBuFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="row.waitSeq != null">
+                WAIT_SEQ = #{row.waitSeq,jdbcType=VARCHAR},
+            </if>
+            <if test="row.reference != null">
+                REFERENCE = #{row.reference,jdbcType=VARCHAR},
+            </if>
+            <if test="row.restraintsStatus != null">
+                RESTRAINTS_STATUS = #{row.restraintsStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="row.company != null">
+                COMPANY = #{row.company,jdbcType=VARCHAR},
+            </if>
+            <if test="row.tranDate != null">
+                TRAN_DATE = #{row.tranDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="row.endDate != null">
+                END_DATE = #{row.endDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        <if test="example != null">
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByExample" parameterType="map">
+        update RB_BUS_RESTRAINTS
+        set
+            THAW_OTH_DOCUMENT_ID2 = #{row.thawOthDocumentId2,jdbcType=VARCHAR},            THAW_DOCUMENT_TYPE2 = #{row.thawDocumentType2,jdbcType=VARCHAR},            DEDUCTION_JUDICIARY_NAME = #{row.deductionJudiciaryName,jdbcType=VARCHAR},            LAST_UPD_TIMESTAMP = #{row.lastUpdTimestamp,jdbcType=VARCHAR},            TRAN_BRANCH = #{row.tranBranch,jdbcType=VARCHAR},            TERM = #{row.term,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_TYPE2 = #{row.judiciaryDocumentType2,jdbcType=VARCHAR},            RES_LAW_NO = #{row.resLawNo,jdbcType=VARCHAR},            START_DATE = #{row.startDate,jdbcType=TIMESTAMP},            TRAN_AMT = #{row.tranAmt,jdbcType=DECIMAL},            JUDICIARY_OTH_DOCUMENT_ID2 = #{row.judiciaryOthDocumentId2,jdbcType=VARCHAR},            COLLAT_IND = #{row.collatInd,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_TYPE = #{row.judiciaryDocumentType,jdbcType=VARCHAR},            INTERNAL_KEY = #{row.internalKey,jdbcType=INTEGER},            AUTH_USER_ID = #{row.authUserId,jdbcType=VARCHAR},            USER_ID = #{row.userId,jdbcType=VARCHAR},            SOURCE_MODULE = #{row.sourceModule,jdbcType=VARCHAR},            RESTRAINT_JUDICIARY_NAME = #{row.restraintJudiciaryName,jdbcType=VARCHAR},            THAW_OTH_DOCUMENT_TYPE = #{row.thawOthDocumentType,jdbcType=VARCHAR},            SETTLEMENT_DATE = #{row.settlementDate,jdbcType=TIMESTAMP},            THAW_OTH_OFFICER_NAME = #{row.thawOthOfficerName,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_TYPE2 = #{row.judiciaryOthDocumentType2,jdbcType=VARCHAR},            RELEASE_LAW_NO = #{row.releaseLawNo,jdbcType=VARCHAR},            RESTRAINT_LEVEL = #{row.restraintLevel,jdbcType=VARCHAR},            RESTRAINT_END_TIME = #{row.restraintEndTime,jdbcType=VARCHAR},            DEDUCTION_LAW_TYPE = #{row.deductionLawType,jdbcType=VARCHAR},            TERM_TYPE = #{row.termType,jdbcType=VARCHAR},            RES_SEQ_NO = #{row.resSeqNo,jdbcType=VARCHAR},            PRE_FROZEN_FLAG = #{row.preFrozenFlag,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_ID = #{row.judiciaryOthDocumentId,jdbcType=VARCHAR},            THAW_DOCUMENT_TYPE = #{row.thawDocumentType,jdbcType=VARCHAR},            CHANNEL_SEQ_NO = #{row.channelSeqNo,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_ID2 = #{row.judiciaryDocumentId2,jdbcType=VARCHAR},            RESTRAINT_TYPE = #{row.restraintType,jdbcType=VARCHAR},            PROGRAM_ID = #{row.programId,jdbcType=VARCHAR},            PLEDGED_AMT = #{row.pledgedAmt,jdbcType=DECIMAL},            THAW_OTH_DOCUMENT_TYPE2 = #{row.thawOthDocumentType2,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_ID = #{row.judiciaryDocumentId,jdbcType=VARCHAR},            JUDICIARY_OFFICER_NAME = #{row.judiciaryOfficerName,jdbcType=VARCHAR},            ORIGINAL_APPLICATION_ID = #{row.originalApplicationId,jdbcType=VARCHAR},            ACCT_INTERNAL_KEY_TYPE = #{row.acctInternalKeyType,jdbcType=VARCHAR},            BUSINESS_APPLICATION_ID = #{row.businessApplicationId,jdbcType=VARCHAR},            RES_ACCT_RANGE = #{row.resAcctRange,jdbcType=VARCHAR},            THAW_OTH_DOCUMENT_ID = #{row.thawOthDocumentId,jdbcType=VARCHAR},            THAW_DOCUMENT_ID2 = #{row.thawDocumentId2,jdbcType=VARCHAR},            BASE_ACCT_NO = #{row.baseAcctNo,jdbcType=VARCHAR},            REVERSAL_FLAG = #{row.reversalFlag,jdbcType=VARCHAR},            THAW_OFFICER_NAME = #{row.thawOfficerName,jdbcType=VARCHAR},            RELEASE_JUDICIARY_NAME = #{row.releaseJudiciaryName,jdbcType=VARCHAR},            CREATE_TIMESTAMP = #{row.createTimestamp,jdbcType=VARCHAR},            RESTRAINT_SOURCE = #{row.restraintSource,jdbcType=VARCHAR},            RES_PRIORITY = #{row.resPriority,jdbcType=VARCHAR},            JUDICIARY_OTH_OFFICER_NAME = #{row.judiciaryOthOfficerName,jdbcType=VARCHAR},            CHANNEL_DATE = #{row.channelDate,jdbcType=TIMESTAMP},            CONTINUE_FREEZE_FLAG = #{row.continueFreezeFlag,jdbcType=VARCHAR},            THAW_DOCUMENT_ID = #{row.thawDocumentId,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_TYPE = #{row.judiciaryOthDocumentType,jdbcType=VARCHAR},            DEDUCTION_LAW_NO = #{row.deductionLawNo,jdbcType=VARCHAR},            AH_BU_FLAG = #{row.ahBuFlag,jdbcType=VARCHAR},            WAIT_SEQ = #{row.waitSeq,jdbcType=VARCHAR},            REFERENCE = #{row.reference,jdbcType=VARCHAR},            RESTRAINTS_STATUS = #{row.restraintsStatus,jdbcType=VARCHAR},            COMPANY = #{row.company,jdbcType=VARCHAR},            TRAN_DATE = #{row.tranDate,jdbcType=TIMESTAMP},            END_DATE = #{row.endDate,jdbcType=TIMESTAMP}        <if test="example != null">
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+    </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.dcits.limit.entity.RbBusRestraints">
+        update RB_BUS_RESTRAINTS
+        <set>
+            <if test="thawOthDocumentId2 != null">
+                THAW_OTH_DOCUMENT_ID2 = #{thawOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentType2 != null">
+                THAW_DOCUMENT_TYPE2 = #{thawDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionJudiciaryName != null">
+                DEDUCTION_JUDICIARY_NAME = #{deductionJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdTimestamp != null">
+                LAST_UPD_TIMESTAMP = #{lastUpdTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="tranBranch != null">
+                TRAN_BRANCH = #{tranBranch,jdbcType=VARCHAR},
+            </if>
+            <if test="term != null">
+                TERM = #{term,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentType2 != null">
+                JUDICIARY_DOCUMENT_TYPE2 = #{judiciaryDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="resLawNo != null">
+                RES_LAW_NO = #{resLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="startDate != null">
+                START_DATE = #{startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="tranAmt != null">
+                TRAN_AMT = #{tranAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="judiciaryOthDocumentId2 != null">
+                JUDICIARY_OTH_DOCUMENT_ID2 = #{judiciaryOthDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="collatInd != null">
+                COLLAT_IND = #{collatInd,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentType != null">
+                JUDICIARY_DOCUMENT_TYPE = #{judiciaryDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="internalKey != null">
+                INTERNAL_KEY = #{internalKey,jdbcType=INTEGER},
+            </if>
+            <if test="authUserId != null">
+                AUTH_USER_ID = #{authUserId,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                USER_ID = #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="sourceModule != null">
+                SOURCE_MODULE = #{sourceModule,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintJudiciaryName != null">
+                RESTRAINT_JUDICIARY_NAME = #{restraintJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOthDocumentType != null">
+                THAW_OTH_DOCUMENT_TYPE = #{thawOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="settlementDate != null">
+                SETTLEMENT_DATE = #{settlementDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="thawOthOfficerName != null">
+                THAW_OTH_OFFICER_NAME = #{thawOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentType2 != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE2 = #{judiciaryOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="releaseLawNo != null">
+                RELEASE_LAW_NO = #{releaseLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintLevel != null">
+                RESTRAINT_LEVEL = #{restraintLevel,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintEndTime != null">
+                RESTRAINT_END_TIME = #{restraintEndTime,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionLawType != null">
+                DEDUCTION_LAW_TYPE = #{deductionLawType,jdbcType=VARCHAR},
+            </if>
+            <if test="termType != null">
+                TERM_TYPE = #{termType,jdbcType=VARCHAR},
+            </if>
+            <if test="preFrozenFlag != null">
+                PRE_FROZEN_FLAG = #{preFrozenFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentId != null">
+                JUDICIARY_OTH_DOCUMENT_ID = #{judiciaryOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentType != null">
+                THAW_DOCUMENT_TYPE = #{thawDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="channelSeqNo != null">
+                CHANNEL_SEQ_NO = #{channelSeqNo,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentId2 != null">
+                JUDICIARY_DOCUMENT_ID2 = #{judiciaryDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintType != null">
+                RESTRAINT_TYPE = #{restraintType,jdbcType=VARCHAR},
+            </if>
+            <if test="programId != null">
+                PROGRAM_ID = #{programId,jdbcType=VARCHAR},
+            </if>
+            <if test="pledgedAmt != null">
+                PLEDGED_AMT = #{pledgedAmt,jdbcType=DECIMAL},
+            </if>
+            <if test="thawOthDocumentType2 != null">
+                THAW_OTH_DOCUMENT_TYPE2 = #{thawOthDocumentType2,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryDocumentId != null">
+                JUDICIARY_DOCUMENT_ID = #{judiciaryDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOfficerName != null">
+                JUDICIARY_OFFICER_NAME = #{judiciaryOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="originalApplicationId != null">
+                ORIGINAL_APPLICATION_ID = #{originalApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="acctInternalKeyType != null">
+                ACCT_INTERNAL_KEY_TYPE = #{acctInternalKeyType,jdbcType=VARCHAR},
+            </if>
+            <if test="businessApplicationId != null">
+                BUSINESS_APPLICATION_ID = #{businessApplicationId,jdbcType=VARCHAR},
+            </if>
+            <if test="resAcctRange != null">
+                RES_ACCT_RANGE = #{resAcctRange,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOthDocumentId != null">
+                THAW_OTH_DOCUMENT_ID = #{thawOthDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentId2 != null">
+                THAW_DOCUMENT_ID2 = #{thawDocumentId2,jdbcType=VARCHAR},
+            </if>
+            <if test="baseAcctNo != null">
+                BASE_ACCT_NO = #{baseAcctNo,jdbcType=VARCHAR},
+            </if>
+            <if test="reversalFlag != null">
+                REVERSAL_FLAG = #{reversalFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="thawOfficerName != null">
+                THAW_OFFICER_NAME = #{thawOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="releaseJudiciaryName != null">
+                RELEASE_JUDICIARY_NAME = #{releaseJudiciaryName,jdbcType=VARCHAR},
+            </if>
+            <if test="createTimestamp != null">
+                CREATE_TIMESTAMP = #{createTimestamp,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintSource != null">
+                RESTRAINT_SOURCE = #{restraintSource,jdbcType=VARCHAR},
+            </if>
+            <if test="resPriority != null">
+                RES_PRIORITY = #{resPriority,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthOfficerName != null">
+                JUDICIARY_OTH_OFFICER_NAME = #{judiciaryOthOfficerName,jdbcType=VARCHAR},
+            </if>
+            <if test="channelDate != null">
+                CHANNEL_DATE = #{channelDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="continueFreezeFlag != null">
+                CONTINUE_FREEZE_FLAG = #{continueFreezeFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="thawDocumentId != null">
+                THAW_DOCUMENT_ID = #{thawDocumentId,jdbcType=VARCHAR},
+            </if>
+            <if test="judiciaryOthDocumentType != null">
+                JUDICIARY_OTH_DOCUMENT_TYPE = #{judiciaryOthDocumentType,jdbcType=VARCHAR},
+            </if>
+            <if test="deductionLawNo != null">
+                DEDUCTION_LAW_NO = #{deductionLawNo,jdbcType=VARCHAR},
+            </if>
+            <if test="ahBuFlag != null">
+                AH_BU_FLAG = #{ahBuFlag,jdbcType=VARCHAR},
+            </if>
+            <if test="waitSeq != null">
+                WAIT_SEQ = #{waitSeq,jdbcType=VARCHAR},
+            </if>
+            <if test="reference != null">
+                REFERENCE = #{reference,jdbcType=VARCHAR},
+            </if>
+            <if test="restraintsStatus != null">
+                RESTRAINTS_STATUS = #{restraintsStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="company != null">
+                COMPANY = #{company,jdbcType=VARCHAR},
+            </if>
+            <if test="tranDate != null">
+                TRAN_DATE = #{tranDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endDate != null">
+                END_DATE = #{endDate,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where RES_SEQ_NO = #{resSeqNo,jdbcType=VARCHAR}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.dcits.limit.entity.RbBusRestraints">
+        update RB_BUS_RESTRAINTS
+        set
+            THAW_OTH_DOCUMENT_ID2 = #{thawOthDocumentId2,jdbcType=VARCHAR},            THAW_DOCUMENT_TYPE2 = #{thawDocumentType2,jdbcType=VARCHAR},            DEDUCTION_JUDICIARY_NAME = #{deductionJudiciaryName,jdbcType=VARCHAR},            LAST_UPD_TIMESTAMP = #{lastUpdTimestamp,jdbcType=VARCHAR},            TRAN_BRANCH = #{tranBranch,jdbcType=VARCHAR},            TERM = #{term,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_TYPE2 = #{judiciaryDocumentType2,jdbcType=VARCHAR},            RES_LAW_NO = #{resLawNo,jdbcType=VARCHAR},            START_DATE = #{startDate,jdbcType=TIMESTAMP},            TRAN_AMT = #{tranAmt,jdbcType=DECIMAL},            JUDICIARY_OTH_DOCUMENT_ID2 = #{judiciaryOthDocumentId2,jdbcType=VARCHAR},            COLLAT_IND = #{collatInd,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_TYPE = #{judiciaryDocumentType,jdbcType=VARCHAR},            INTERNAL_KEY = #{internalKey,jdbcType=INTEGER},            AUTH_USER_ID = #{authUserId,jdbcType=VARCHAR},            USER_ID = #{userId,jdbcType=VARCHAR},            SOURCE_MODULE = #{sourceModule,jdbcType=VARCHAR},            RESTRAINT_JUDICIARY_NAME = #{restraintJudiciaryName,jdbcType=VARCHAR},            THAW_OTH_DOCUMENT_TYPE = #{thawOthDocumentType,jdbcType=VARCHAR},            SETTLEMENT_DATE = #{settlementDate,jdbcType=TIMESTAMP},            THAW_OTH_OFFICER_NAME = #{thawOthOfficerName,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_TYPE2 = #{judiciaryOthDocumentType2,jdbcType=VARCHAR},            RELEASE_LAW_NO = #{releaseLawNo,jdbcType=VARCHAR},            RESTRAINT_LEVEL = #{restraintLevel,jdbcType=VARCHAR},            RESTRAINT_END_TIME = #{restraintEndTime,jdbcType=VARCHAR},            DEDUCTION_LAW_TYPE = #{deductionLawType,jdbcType=VARCHAR},            TERM_TYPE = #{termType,jdbcType=VARCHAR},            PRE_FROZEN_FLAG = #{preFrozenFlag,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_ID = #{judiciaryOthDocumentId,jdbcType=VARCHAR},            THAW_DOCUMENT_TYPE = #{thawDocumentType,jdbcType=VARCHAR},            CHANNEL_SEQ_NO = #{channelSeqNo,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_ID2 = #{judiciaryDocumentId2,jdbcType=VARCHAR},            RESTRAINT_TYPE = #{restraintType,jdbcType=VARCHAR},            PROGRAM_ID = #{programId,jdbcType=VARCHAR},            PLEDGED_AMT = #{pledgedAmt,jdbcType=DECIMAL},            THAW_OTH_DOCUMENT_TYPE2 = #{thawOthDocumentType2,jdbcType=VARCHAR},            JUDICIARY_DOCUMENT_ID = #{judiciaryDocumentId,jdbcType=VARCHAR},            JUDICIARY_OFFICER_NAME = #{judiciaryOfficerName,jdbcType=VARCHAR},            ORIGINAL_APPLICATION_ID = #{originalApplicationId,jdbcType=VARCHAR},            ACCT_INTERNAL_KEY_TYPE = #{acctInternalKeyType,jdbcType=VARCHAR},            BUSINESS_APPLICATION_ID = #{businessApplicationId,jdbcType=VARCHAR},            RES_ACCT_RANGE = #{resAcctRange,jdbcType=VARCHAR},            THAW_OTH_DOCUMENT_ID = #{thawOthDocumentId,jdbcType=VARCHAR},            THAW_DOCUMENT_ID2 = #{thawDocumentId2,jdbcType=VARCHAR},            BASE_ACCT_NO = #{baseAcctNo,jdbcType=VARCHAR},            REVERSAL_FLAG = #{reversalFlag,jdbcType=VARCHAR},            THAW_OFFICER_NAME = #{thawOfficerName,jdbcType=VARCHAR},            RELEASE_JUDICIARY_NAME = #{releaseJudiciaryName,jdbcType=VARCHAR},            CREATE_TIMESTAMP = #{createTimestamp,jdbcType=VARCHAR},            RESTRAINT_SOURCE = #{restraintSource,jdbcType=VARCHAR},            RES_PRIORITY = #{resPriority,jdbcType=VARCHAR},            JUDICIARY_OTH_OFFICER_NAME = #{judiciaryOthOfficerName,jdbcType=VARCHAR},            CHANNEL_DATE = #{channelDate,jdbcType=TIMESTAMP},            CONTINUE_FREEZE_FLAG = #{continueFreezeFlag,jdbcType=VARCHAR},            THAW_DOCUMENT_ID = #{thawDocumentId,jdbcType=VARCHAR},            JUDICIARY_OTH_DOCUMENT_TYPE = #{judiciaryOthDocumentType,jdbcType=VARCHAR},            DEDUCTION_LAW_NO = #{deductionLawNo,jdbcType=VARCHAR},            AH_BU_FLAG = #{ahBuFlag,jdbcType=VARCHAR},            WAIT_SEQ = #{waitSeq,jdbcType=VARCHAR},            REFERENCE = #{reference,jdbcType=VARCHAR},            RESTRAINTS_STATUS = #{restraintsStatus,jdbcType=VARCHAR},            COMPANY = #{company,jdbcType=VARCHAR},            TRAN_DATE = #{tranDate,jdbcType=TIMESTAMP},            END_DATE = #{endDate,jdbcType=TIMESTAMP}        where RES_SEQ_NO = #{resSeqNo,jdbcType=VARCHAR}
+    </update>
+</mapper>
